@@ -17,10 +17,11 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh './main/output'
-                echo 'Test stage successful'
+                sh './non_existent_file'  // Intentional error
+                echo 'Test Stage Completed'
             }
         }
+
 
         stage('Deploy') {
             steps {
